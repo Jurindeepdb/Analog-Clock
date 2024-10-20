@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100, "YTLC" 500;
+    font-size: 50px;
+    color: 	#ff7f50;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: 	#f5f5dc ;
+}
+
+.container{
+    position: relative;
+}
+
+.clock{
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-color: #fffacd;
+    border: 20px solid #ff7f50;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.589);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 10px;
+    text-align: center;
+}
+
+.clock span b{
+    display: inline-flex;
+}
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: 	#ff7f50;
+    z-index: 2;
+}
+
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i{
+    position: absolute;
+    background-color: 	#ff7f50;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.589);;
+    width: var(--w, 5px);
+    height: var(--h);
+}
+
+#hour, #hour1{
+    z-index: 1;
+}
+
+#minute, #minute1{
+    z-index: 2;
+}
+
+#second, #second1{
+    z-index: 3;
+}
+
+.center-circle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: 	#c0552f;
+    border-radius: 50%;
+    z-index: 10;
+}
